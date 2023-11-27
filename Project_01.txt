@@ -1,0 +1,502 @@
+Lion@DESKTOP-0V037KU MINGW64 ~
+$ cd desktop
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop
+$ mkdir git-test
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop
+$ cd git-test
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-test
+$ git clone ^[[200~https://github.com/keiko233/clash-nyanpasu.git~
+Cloning into 'clash-nyanpasu.git~'...
+fatal: protocol '?[200~https' is not supported
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-test
+$ git clone https://github.com/keiko233/clash-nyanpasu.git
+Cloning into 'clash-nyanpasu'...
+remote: Enumerating objects: 8182, done.
+remote: Counting objects: 100% (248/248), done.
+remote: Compressing objects: 100% (146/146), done.
+remote: Total 8182 (delta 110), reused 229 (delta 100), pack-reused 7934
+Receiving objects: 100% (8182/8182), 12.55 MiB | 2.63 MiB/s, done.
+Resolving deltas: 100% (5644/5644), done.
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-test
+$ cd clash-nyanpasu
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-test/clash-nyanpasu (main)
+$ cd ..
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-test
+$ cd ..
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop
+$ mkdir git-learn
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop
+$ cd git-learn
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn
+$ git init
+Initialized empty Git repository in C:/Users/Lion/Desktop/git-learn/.git/
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git gonfig --global user.name "ApolloAidin"
+git: 'gonfig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git config --global user.name "ApolloAidin"
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git config --global user.email "aidinf4@gmail.com"
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ touch main.txt
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git add main.txt
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.txt
+
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.txt
+
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git commit -m "initial commit"
+[master (root-commit) da0a314] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.txt
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git add main.txt
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   main.txt
+
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git commit -m "new lines added to main"
+[master 01b8a12] new lines added to main
+ 1 file changed, 2 insertions(+)
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff
+diff --git a/main.txt b/main.txt
+index e2ad8fa..cefd6ea 100644
+--- a/main.txt
++++ b/main.txt
+@@ -1,2 +1,3 @@
+ Hello World!
+-Remember I love Bahar...
+\ No newline at end of file
++Remember I love Bahar...
++Very Much...
+\ No newline at end of file
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git add main.txt
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git commit -m "amount of love"
+[master f88acf6] amount of love
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ touch test.log
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ touch .gitignore
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git add .gitignore
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git commit -m "gitignore file added just for loge files"
+[master ec8d56a] gitignore file added just for loge files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD^
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..bf0824e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.log
+\ No newline at end of file
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD^^
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..bf0824e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.log
+\ No newline at end of file
+diff --git a/main.txt b/main.txt
+index e2ad8fa..cefd6ea 100644
+--- a/main.txt
++++ b/main.txt
+@@ -1,2 +1,3 @@
+ Hello World!
+-Remember I love Bahar...
+\ No newline at end of file
++Remember I love Bahar...
++Very Much...
+\ No newline at end of file
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD~2
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..bf0824e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.log
+\ No newline at end of file
+diff --git a/main.txt b/main.txt
+index e2ad8fa..cefd6ea 100644
+--- a/main.txt
++++ b/main.txt
+@@ -1,2 +1,3 @@
+ Hello World!
+-Remember I love Bahar...
+\ No newline at end of file
++Remember I love Bahar...
++Very Much...
+\ No newline at end of file
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD~5
+fatal: ambiguous argument 'HEAD~5': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD~3
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..bf0824e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.log
+\ No newline at end of file
+diff --git a/main.txt b/main.txt
+index e69de29..cefd6ea 100644
+--- a/main.txt
++++ b/main.txt
+@@ -0,0 +1,3 @@
++Hello World!
++Remember I love Bahar...
++Very Much...
+\ No newline at end of file
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD~4
+fatal: ambiguous argument 'HEAD~4': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git diff HEAD~3
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..bf0824e
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.log
+\ No newline at end of file
+diff --git a/main.txt b/main.txt
+index e69de29..cefd6ea 100644
+--- a/main.txt
++++ b/main.txt
+@@ -0,0 +1,3 @@
++Hello World!
++Remember I love Bahar...
++Very Much...
+\ No newline at end of file
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log
+commit ec8d56a1ae1de1af3bbcbfefb8036a7cf3e0bac8 (HEAD -> master)
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:40:16 2023 +0330
+
+    gitignore file added just for loge files
+
+commit f88acf6d9d272768e4df1aefd24349260c42f838
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:18:10 2023 +0330
+
+    amount of love
+
+commit 01b8a12b09185741b17a68e8dfbbf865ed30f152
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:11:44 2023 +0330
+
+    new lines added to main
+
+commit da0a31454087ffafaeac13f379bb2b06f35bbf07
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:05:34 2023 +0330
+
+    initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log --oneline
+ec8d56a (HEAD -> master) gitignore file added just for loge files
+f88acf6 amount of love
+01b8a12 new lines added to main
+da0a314 initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+ec8d56a ApolloAidin     Mon Nov 27 06:40:16 2023 +0330  gitignore file added just for loge files
+f88acf6 ApolloAidin     Mon Nov 27 06:18:10 2023 +0330  amount of love
+01b8a12 ApolloAidin     Mon Nov 27 06:11:44 2023 +0330  new lines added to main
+da0a314 ApolloAidin     Mon Nov 27 06:05:34 2023 +0330  initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git blame
+.git/       .gitignore  main.txt    test.log
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git blame
+.git/       .gitignore  main.txt    test.log
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git blame
+.git/       .gitignore  main.txt    test.log
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git blame main.txt
+01b8a12b (ApolloAidin 2023-11-27 06:11:44 +0330 1) Hello World!
+f88acf6d (ApolloAidin 2023-11-27 06:18:10 +0330 2) Remember I love Bahar...
+f88acf6d (ApolloAidin 2023-11-27 06:18:10 +0330 3) Very Much...
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git add main.txt
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git commite -m "emphesize"
+git: 'commite' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git commit -m "emphesize"
+[master 97d6f15] emphesize
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git blame main.txt
+01b8a12b (ApolloAidin 2023-11-27 06:11:44 +0330 1) Hello World!
+f88acf6d (ApolloAidin 2023-11-27 06:18:10 +0330 2) Remember I love Bahar...
+97d6f151 (ApolloAidin 2023-11-27 08:04:33 +0330 3) Very Much... Really...
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git tag V0.2
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git blame main.txt
+01b8a12b (ApolloAidin 2023-11-27 06:11:44 +0330 1) Hello World!
+f88acf6d (ApolloAidin 2023-11-27 06:18:10 +0330 2) Remember I love Bahar...
+97d6f151 (ApolloAidin 2023-11-27 08:04:33 +0330 3) Very Much... Really...
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log
+commit 97d6f151914f6a4cb152e48b7e11abb32ebeb29b (HEAD -> master, tag: V0.2)
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 08:04:33 2023 +0330
+
+    emphesize
+
+commit ec8d56a1ae1de1af3bbcbfefb8036a7cf3e0bac8
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:40:16 2023 +0330
+
+    gitignore file added just for loge files
+
+commit f88acf6d9d272768e4df1aefd24349260c42f838
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:18:10 2023 +0330
+
+    amount of love
+
+commit 01b8a12b09185741b17a68e8dfbbf865ed30f152
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:11:44 2023 +0330
+
+    new lines added to main
+
+commit da0a31454087ffafaeac13f379bb2b06f35bbf07
+Author: ApolloAidin <aidinf4@gmail.com>
+Date:   Mon Nov 27 06:05:34 2023 +0330
+
+    initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log --oneline
+97d6f15 (HEAD -> master, tag: V0.2) emphesize
+ec8d56a gitignore file added just for loge files
+f88acf6 amount of love
+01b8a12 new lines added to main
+da0a314 initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ ^C
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git tag V0.2 f88acf6
+fatal: tag 'V0.2' already exists
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git tag V0.1 f88acf6
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log --oneline
+97d6f15 (HEAD -> master, tag: V0.2) emphesize
+ec8d56a gitignore file added just for loge files
+f88acf6 (tag: V0.1) amount of love
+01b8a12 new lines added to main
+da0a314 initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+97d6f15 ApolloAidin     Mon Nov 27 08:04:33 2023 +0330  emphesize
+ec8d56a ApolloAidin     Mon Nov 27 06:40:16 2023 +0330  gitignore file added just for loge files
+f88acf6 ApolloAidin     Mon Nov 27 06:18:10 2023 +0330  amount of love
+01b8a12 ApolloAidin     Mon Nov 27 06:11:44 2023 +0330  new lines added to main
+da0a314 ApolloAidin     Mon Nov 27 06:05:34 2023 +0330  initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git log --oneline --graph
+* 97d6f15 (HEAD -> master, tag: V0.2) emphesize
+* ec8d56a gitignore file added just for loge files
+* f88acf6 (tag: V0.1) amount of love
+* 01b8a12 new lines added to main
+* da0a314 initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$ git reflog
+97d6f15 (HEAD -> master, tag: V0.2) HEAD@{0}: commit: emphesize
+ec8d56a HEAD@{1}: commit: gitignore file added just for loge files
+f88acf6 (tag: V0.1) HEAD@{2}: commit: amount of love
+01b8a12 HEAD@{3}: commit: new lines added to main
+da0a314 HEAD@{4}: commit (initial): initial commit
+
+Lion@DESKTOP-0V037KU MINGW64 ~/desktop/git-learn (master)
+$
